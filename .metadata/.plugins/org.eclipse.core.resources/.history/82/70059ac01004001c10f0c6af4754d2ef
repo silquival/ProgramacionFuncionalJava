@@ -1,0 +1,15 @@
+package org.formacion;
+
+public interface Agrupador {
+
+	void add (Object elemento);
+	
+	int numeroElementos();
+	
+	default void addAll(List<Agrupador> elementos) {
+		for(Object elemento : elementos) {
+			this.add(elemento);
+		}
+	}
+	
+}
